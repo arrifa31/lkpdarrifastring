@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LKPD JavaScript - ARRIFA USWATUN HASANAH</title>
+    <!-- Menghubungkan file CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <!-- Header Info Siswa & Sekolah -->
+        <header>
+            <h1>LKPD Interaktif: JavaScript (String, Number & Konversi Data)</h1>
+            <p><strong>Satuan Pendidikan:</strong> SMKN 1 GARUT</p>
+            <p><strong>Mata Pelajaran:</strong> Dasar-Dasar Pengembangan Perangkat Lunak dan Gim[cite: 1]</p>
+            <div class="info-grid">
+                <div class="info-item"><span>Nama:</span> ARRIFA USWATUN HASANAH</div>
+                <div class="info-item"><span>Kelas:</span> X PPLG 1</div>
+                <div class="info-item"><span>Tanggal:</span>19 OKTOBER 2026</div>
+            </div>
+        </header>
+
+        <!-- Tujuan Pembelajaran -->
+        <section>
+            <h2>A. Tujuan Pembelajaran</h2>
+            <ul>
+                <li>Membedakan String dan Number.[cite: 1]</li>
+                <li>Menjelaskan bahwa <code>prompt()</code> menghasilkan String.</li>
+                <li>Menggunakan <code>Number()</code> dan <code>String()</code>.</li>
+                <li>Menganalisis kesalahan akibat tipe data.</li>
+                <li>Membuat program input dan perhitungan sederhana.</li>
+            </ul>
+        </section>
+
+        <!-- Aktivitas 1 -->
+        <section>
+            <h2>C. Aktivitas 1: Eksperimen "10" + "20"</h2>
+            <p>Kode yang diuji:</p>
+            <pre>let a = "10";
+let b = "20";
+console.log(a + b);</pre>
+            <div class="interactive-box">
+                <p><strong>Output Program:</strong> <code>1020</code> (Penggabungan teks / konkatenasi, bukan penjumlahan angka).</p>
+                <p><strong>Penjelasan:</strong> Variabel <code>a</code> dan <code>b</code> bertipe <code>String</code> karena diapit tanda petik, jadi operator <code>+</code> berfungsi untuk menggabungkan string.</p>
+            </div>
+        </section>
+
+        <!-- Aktivitas 2 -->
+        <section>
+            <h2>D. Aktivitas 2: Menemukan Tipe Data</h2>
+            <p>Pemeriksaan tipe data variabel menggunakan <code>typeof</code>[cite: 2]:</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Variabel</th>
+                        <th>Nilai</th>
+                        <th>Hasil <code>typeof</code></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>nama</code></td>
+                        <td>"Asep"</td>
+                        <td><code id="typeofNama">string</code></td>
+                    </tr>
+                    <tr>
+                        <td><code>umur</code></td>
+                        <td>16</td>
+                        <td><code id="typeofUmur">number</code></td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="interactive-box">
+                <p><strong>Kesimpulan:</strong> <code>String</code> digunakan untuk teks (diapit tanda petik), sedangkan <code>Number</code> digunakan untuk nilai numerik yang dapat dihitung secara matematis.</p>
+            </div>
+        </section>
+
+        <!-- Aktivitas 3 -->
+        <section>
+            <h2>E. Aktivitas 3: Konversi String Menjadi Number</h2>
+            <p>Memperbaiki program agar menghasilkan <code>30</code> menggunakan <code>Number()</code>[cite: 2]:</p>
+            <pre>let a = "10";
+let b = "20";
+let hasil = Number(a) + Number(b);
+console.log(hasil); // Hasil: 30</pre>
+        </section>
+
+        <!-- Aktivitas 4 -->
+        <section>
+            <h2>F. Aktivitas 4: Program Kasir Sederhana</h2>
+            <p>Simulasi kalkulator kasir yang mengubah input string dari <code>prompt()</code> menjadi <code>Number</code>[cite: 2]:</p>
+            <div class="interactive-box">
+                <div class="form-group">
+                    <label for="harga">Harga Barang (Rp):</label>
+                    <input type="number" id="harga" placeholder="Masukkan harga">
+                </div>
+                <div class="form-group">
+                    <label for="jumlah">Jumlah Barang:</label>
+                    <input type="number" id="jumlah" placeholder="Masukkan jumlah">
+                </div>
+                <button onclick="hitungKasir()">Hitung Total Belanja</button>
+                <div class="result-box" id="hasilKasir">Total Belanja = Rp 0</div>
+            </div>
+        </section>
+
+        <!-- Aktivitas G: Tantangan -->
+        <section>
+            <h2>G. Tantangan: Program Hitung Nilai Rata-Rata</h2>
+            <div class="interactive-box">
+                <div class="form-group">
+                    <label for="tugas">Nilai Tugas:</label>
+                    <input type="number" id="tugas" placeholder="Masukkan nilai tugas">
+                </div>
+                <div class="form-group">
+                    <label for="uts">Nilai UTS:</label>
+                    <input type="number" id="uts" placeholder="Masukkan nilai UTS">
+                </div>
+                <div class="form-group">
+                    <label for="uas">Nilai UAS:</label>
+                    <input type="number" id="uas" placeholder="Masukkan nilai UAS">
+                </div>
+                <button onclick="hitungRataRata()">Hitung Rata-Rata Nilai</button>
+                <div class="result-box" id="hasilRataRata">Rata-Rata Nilai = 0</div>
+            </div>
+        </section>
+
+        <!-- Think Pair Share & Refleksi -->
+        <section>
+            <h2>H & I. Think Pair Share & Refleksi 3-2-1</h2>
+            <div class="form-group">
+                <label>Mengapa prompt() perlu dikonversi jika hasilnya ingin dihitung?</label>
+                <textarea rows="2" readonly>Karena prompt() selalu mengembalikan data bertipe String. Jika tidak dikonversi ke Number, angka akan digabungkan secara teks (konkatenasi) bukannya dijumlahkan.</textarea>
+            </div>
+            <div class="form-group">
+                <label>Apa perbedaan "10" dengan 10?</label>
+                <textarea rows="2" readonly>"10" adalah String (teks), sedangkan 10 adalah Number (angka untuk operasi matematika).</textarea>
+            </div>
+        </section>
+
+        <!-- Penilaian Diri -->
+        <section>
+            <h2>J. Penilaian Diri</h2>
+            <div class="checkbox-group">
+                <input type="checkbox" id="p1" checked disabled>
+                <label for="p1">Saya dapat membedakan String dan Number.[cite: 3]</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="p2" checked disabled>
+                <label for="p2">Saya memahami prompt() menghasilkan String.[cite: 3]</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="p3" checked disabled>
+                <label for="p3">Saya dapat menggunakan Number().[cite: 3]</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="p4" checked disabled>
+                <label for="p4">Saya dapat menggunakan String().[cite: 3]</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="p5" checked disabled>
+                <label for="p5">Saya dapat menemukan kesalahan tipe data.[cite: 3]</label>
+            </div>
+            <div class="checkbox-group">
+                <input type="checkbox" id="p6" checked disabled>
+                <label for="p6">Saya dapat membuat program input dan hitung sederhana.[cite: 3]</label>
+            </div>
+        </section>
+    </div>
+
+    <!-- Menghubungkan file JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>

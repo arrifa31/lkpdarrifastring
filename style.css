@@ -1,0 +1,164 @@
+:root {
+    --primary: #2563eb;
+    --primary-dark: #1d4ed8;
+    --bg: #c6d7e9;
+    --card-bg: #ffffff;
+    --text: #1e293b;
+    --border: #e2e8f0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    padding: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+header {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+    border-left: 6px solid var(--primary);
+}
+
+header h1 {
+    font-size: 1.8rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+    margin-top: 12px;
+    font-size: 0.95rem;
+}
+
+.info-item span {
+    font-weight: bold;
+}
+
+section {
+    background: var(--card-bg);
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+h2 {
+    font-size: 1.4rem;
+    color: var(--primary-dark);
+    margin-bottom: 16px;
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 8px;
+}
+
+ul, ol {
+    padding-left: 20px;
+    margin-bottom: 12px;
+}
+
+.interactive-box {
+    background-color: #f1f5f9;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 12px;
+}
+
+code {
+    background-color: #e2e8f0;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    color: #4766f1;
+}
+
+pre {
+    background-color: #0f172a;
+    color: #f8fafc;
+    padding: 12px;
+    border-radius: 8px;
+    overflow-x: auto;
+    font-family: monospace;
+    margin: 10px 0;
+}
+
+.form-group {
+    margin-bottom: 12px;
+}
+
+label {
+    display: block;
+    margin-bottom: 4px;
+    font-weight: 600;
+}
+
+input[type="number"], input[type="text"], textarea {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+button {
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.2s;
+}
+
+button:hover {
+    background-color: var(--primary-dark);
+}
+
+.result-box {
+    margin-top: 12px;
+    padding: 12px;
+    background-color: #e0f2fe;
+    border-left: 4px solid var(--primary);
+    font-weight: bold;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+}
+
+th, td {
+    border: 1px solid var(--border);
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 8px;
+}
